@@ -13,6 +13,12 @@ public:
         passengers = 0;
     }
 
+    Car(float amount) {
+        fuel = amount;
+        speed = 0;
+        passengers = 0;
+    }
+
     ~Car() {
         std::cout << "~Car()" << std::endl;
     }
@@ -48,7 +54,7 @@ void Car::Dashboard() {
 }
 
 int main() {
-    Car car;
+    Car car(4);
     car.FillFuel(6);
     car.Accelerate();
     car.Accelerate();
