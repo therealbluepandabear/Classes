@@ -6,16 +6,19 @@ private:
     int passengers { 0 };
     int arr[5] = { 1, 2, 3 };
     char *p {};
+    static int totalCount;
 public:
     Car() {
         std::cout << "Car()" << std::endl;
     }
 
     Car(float amount) {
+        totalCount++;
         fuel = amount;
     }
 
     ~Car() {
+        totalCount--;
         std::cout << "~Car()" << std::endl;
     }
 
@@ -25,6 +28,8 @@ public:
     void AddPassengers(int count);
     void Dashboard() const;
 };
+
+int Car::totalCount = 5;
 
 void Car::FillFuel(float amount) {
     this->fuel += amount;
