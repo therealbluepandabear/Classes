@@ -58,6 +58,7 @@ void Car::Dashboard() const {
     std::cout << "Fuel: " << fuel << std::endl;
     std::cout << "Speed: " << speed << std::endl;
     std::cout << "Passengers: " << passengers << std::endl;
+    std::cout << "Total cars: " << totalCount << std::endl;
 }
 
 int main() {
