@@ -23,7 +23,7 @@ public:
     void Accelerate();
     void Brake();
     void AddPassengers(int count);
-    void Dashboard();
+    void Dashboard() const;
 };
 
 void Car::FillFuel(float amount) {
@@ -49,14 +49,14 @@ void Car::AddPassengers(int passengers) {
 }
 
 
-void Car::Dashboard() {
+void Car::Dashboard() const {
     std::cout << "Fuel: " << fuel << std::endl;
     std::cout << "Speed: " << speed << std::endl;
     std::cout << "Passengers: " << passengers << std::endl;
 }
 
 int main() {
-    Car c(5);
+    const Car c(5);
     c.Dashboard();
 
     return 0;
