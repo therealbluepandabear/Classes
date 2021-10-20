@@ -39,8 +39,8 @@ void Car::Brake() {
     this->speed = 0;
 }
 
-void Car::AddPassengers(int count) {
-    this->passengers = count;
+void Car::AddPassengers(int passengers) {
+    this->passengers = passengers;
 }
 
 void Car::Dashboard() {
