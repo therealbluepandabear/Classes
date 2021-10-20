@@ -1,22 +1,18 @@
 #include <iostream>
 class Car {
 private:
-    float fuel;
-    float speed;
-    int passengers;
+    float fuel { 0 };
+    float speed { 0 };
+    int passengers { 0 };
+    int arr[5] = { 1, 2, 3 };
+    char *p {};
 public:
     Car() {
         std::cout << "Car()" << std::endl;
-
-        fuel = 0;
-        speed = 0;
-        passengers = 0;
     }
 
     Car(float amount) {
         fuel = amount;
-        speed = 0;
-        passengers = 0;
     }
 
     ~Car() {
@@ -54,13 +50,8 @@ void Car::Dashboard() {
 }
 
 int main() {
-    Car car(4);
-    car.FillFuel(6);
-    car.Accelerate();
-    car.Accelerate();
-    car.Accelerate();
-    car.Accelerate();
-    car.Dashboard();
+    Car c(5);
+    c.Dashboard();
 
     return 0;
 }
