@@ -27,20 +27,20 @@ public:
 };
 
 void Car::FillFuel(float amount) {
-
+    this->fuel += amount;
 }
 
 void Car::Accelerate() {
-    speed++;
-    fuel -= 0.5f;
+    this->speed++;
+    this->fuel -= 0.5f;
 }
 
 void Car::Brake() {
-    speed = 0;
+    this->speed = 0;
 }
 
 void Car::AddPassengers(int count) {
-    passengers = count;
+    this->passengers = count;
 }
 
 void Car::Dashboard() {
