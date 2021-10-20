@@ -36,6 +36,13 @@ void Car::Dashboard() {
 }
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    Car car;
+    car.FillFuel(6);
+    car.Accelerate();
+    car.Accelerate();
+    car.Accelerate();
+    car.Accelerate();
+    car.Dashboard();
+
     return 0;
 }
