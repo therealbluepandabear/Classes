@@ -5,6 +5,12 @@ private:
     float speed;
     int passengers;
 public:
+    Car() {
+        fuel = 0;
+        speed = 0;
+        passengers = 0;
+    }
+
     void FillFuel(float amount);
     void Accelerate();
     void Brake();
