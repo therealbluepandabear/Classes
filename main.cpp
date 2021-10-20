@@ -6,9 +6,15 @@ private:
     int passengers;
 public:
     Car() {
+        std::cout << "Car()" << std::endl;
+
         fuel = 0;
         speed = 0;
         passengers = 0;
+    }
+
+    ~Car() {
+        std::cout << "~Car()" << std::endl;
     }
 
     void FillFuel(float amount);
