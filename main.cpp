@@ -9,6 +9,7 @@ private:
     static int totalCount;
 public:
     Car() {
+        totalCount++;
         std::cout << "Car()" << std::endl;
     }
 
@@ -18,7 +19,6 @@ public:
     }
 
     ~Car() {
-        totalCount--;
         std::cout << "~Car()" << std::endl;
     }
 
@@ -27,9 +27,10 @@ public:
     void Brake();
     void AddPassengers(int count);
     void Dashboard() const;
+    static void ShowCount();
 };
 
-int Car::totalCount = 5;
+int Car::totalCount = 0;
 
 void Car::FillFuel(float amount) {
     this->fuel += amount;
@@ -61,9 +62,16 @@ void Car::Dashboard() const {
     std::cout << "Total cars: " << totalCount << std::endl;
 }
 
+void Car::ShowCount() {
+    std::cout << "Total cars: " << totalCount << std::endl;
+}
+
 int main() {
-    const Car c(5);
-    c.Dashboard();
+    Car c1, c2, c3;
+
+    c1.Dashboard();
+
+    Car::ShowCount();
 
     return 0;
 }
